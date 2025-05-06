@@ -4,13 +4,13 @@ import "./index.css";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Homepage from "./routes/Homepage.jsx";
-import PostList from "./routes/PostList.jsx";
 import Write from "./routes/Write.jsx";
 import Login from "./routes/Login.jsx";
 import Register from "./routes/Register.jsx";
 import SinglePostPage from "./routes/SinglePostPage.jsx";
 import MainLayout from "./layouts/MainLayout.jsx";
 import { ClerkProvider } from "@clerk/clerk-react";
+import PostListPage from "./routes/PostListPage.jsx";
 
 // Import your Publishable Key
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/posts",
-        element: <PostList />,
+        element: <PostListPage />,
       },
       {
         path: "/:slug",
